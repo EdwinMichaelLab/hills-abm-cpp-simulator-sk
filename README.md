@@ -3,9 +3,9 @@
 # Modified City-Scale epidemic simulator (for Hillsborough County Florida USA)
 
 There are three(3) main components:
-* Synthetic Population Generation (`StaticInst/`)
-* C++ simulator (`cpp-simulator/`)
-* Web / Javascript simulator (`simulator/`)
+* Synthetic Population Generation (staticInst/)
+* C++ simulator (cpp-simulator/)
+* Web / Javascript simulator (simulator/)
 
 ## `StaticInst/` - Generates static files to instantiate a city based on Demographics data
 The first stage of the simulator workflow is to generate static information required to instantiate a city.  To get the necessary options to instantiate the city:
