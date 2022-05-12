@@ -265,37 +265,6 @@ class City:
                              .rename(columns={'wardNo_x':'wardNo'})
                             )
     
-    # def set_geoDF_old(self, input_dir):
-    #     assert fileExists(Path(input_dir, inputfiles["citygeojson"])), f"{inputfiles['citygeojson']} missing"
-        
-    #     geoDF = gpd.read_file(Path(input_dir,inputfiles["citygeojson"]))
-
-    #     necessary_cols = ['wardNo', 'wardName', 'geometry']
-    #     for col in necessary_cols:
-    #         assert col in geoDF.columns
-    #     geoDF = geoDF[necessary_cols]
-
-    #     geoDF['wardBounds'] = geoDF.apply( lambda row:  MultiPolygon(row['geometry']).bounds, axis=1)
-    #     geoDF['wardCentre'] = geoDF.apply(
-    #         lambda row: (
-    #             MultiPolygon(row['geometry']).centroid.x, 
-    #             MultiPolygon(row['geometry']).centroid.y
-    #         ),
-    #         axis=1
-    #         )
-    #     geoDF['wardNo'] = geoDF['wardNo'].astype(int)
-
-    #     self.wardData = self.wardData.merge(
-    #         geoDF, 
-    #         on="wardName",
-    #         validate="one_to_one")
-        
-    #     self.check_merged_df(self.wardData, "city.geojson")
-    #     self.wardData = (self.wardData
-    #                          .drop(['wardNo_y'], axis=1)
-    #                          .rename(columns={'wardNo_x':'wardNo'})
-    #                         )
-
     def set_geoDF(self, input_dir):
         assert fileExists(Path(input_dir, inputfiles["citygeojson"])), f"{inputfiles['citygeojson']} missing"
         
