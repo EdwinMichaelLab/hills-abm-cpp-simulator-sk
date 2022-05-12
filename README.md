@@ -3,9 +3,9 @@
 # Modified City-Scale epidemic simulator (for Hillsborough County Florida USA)
 
 There are three(3) main components:
-* Synthetic Population Generation (staticInst/)
-* C++ simulator (cpp-simulator/)
-* Web / Javascript simulator (simulator/)
+* [Synthetic Population Generation](staticInst/)
+* [C++ simulator](cpp-simulator/)
+* [Web / Javascript simulator](simulator/)
 
 ## `StaticInst/` - Generates static files to instantiate a city based on Demographics data
 The first stage of the simulator workflow is to generate static information required to instantiate a city.  To get the necessary options to instantiate the city:
@@ -37,4 +37,5 @@ A detailed description of the input files, the script and instructions to run ar
 This folder contains the cpp-version of the simulator. The CPP simulator evolved from the JS simulator. 
 Please read the  [`cpp-simulator/README.md`](cpp-simulator/README.md) for more details.
 
-# This is the modified for our academic research form here: https://github.com/cni-iisc/epidemic-simulator.
+# This is the modified for our academic research form here:
+[CNI-IISC Epidemic Simulator](https://github.com/cni-iisc/epidemic-simulator)
