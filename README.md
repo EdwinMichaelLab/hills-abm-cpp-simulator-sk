@@ -1,6 +1,6 @@
 # hillsborough_fl_simulator-skim
-This is a Modified City-Scale epidemic simulator (for Hillsborough County Florida USA)
-We used [CNI-IISC Epidemic Simulator](https://github.com/cni-iisc/epidemic-simulator) as base with modifications
+This is a Modified City-Scale epidemic simulator (for Hillsborough County Florida USA).
+We modified [CNI-IISC Epidemic Simulator](https://github.com/cni-iisc/epidemic-simulator) as a base with the following areas:
 * Use public land use map data to allocate houses, schools, workplaces and more.
 * Add movements / schedules based on the data we processed
 * And etc.
@@ -40,6 +40,3 @@ A detailed description of the input files, the script and instructions to run ar
 ## `cpp-simulator/` - CPP simulator
 This folder contains the cpp-version of the simulator. The CPP simulator evolved from the JS simulator. 
 Please read the  [`cpp-simulator/README.md`](cpp-simulator/README.md) for more details.
-
-# This is the modified for our academic research form here:
-
