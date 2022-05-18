@@ -233,7 +233,7 @@ class City:
             self.has_slums = False
         demographics = demographics[necessary_cols]
         demographics["wardNo"] = demographics["wardNo"].astype(int)
-        demographics["wardName"] = demographics["wardName"].astype(str) # SK: 5/2/2022 make sure... name is string
+        demographics["wardName"] = demographics["wardName"].astype(str) # SK: 5/2/2022 make sure... name is string ...
         demographics["wardIndex"] = demographics["wardNo"] - 1 # To work with a 0-indexed column
         demographics['totalPopulation'] = demographics['totalPopulation'].astype(int)
 
@@ -251,7 +251,7 @@ class City:
         employments = employments[necessary_cols]
 
         employments["wardNo"] = employments["wardNo"].astype(int)
-        employments["wardName"] = employments["wardName"].astype(str) # make sure ... it's string
+        employments["wardName"] = employments["wardName"].astype(str) # make sure ... it's string ...
         employments['Employed'] = employments['Employed'].astype(int)
 
         self.wardData = self.wardData.merge(
@@ -276,6 +276,7 @@ class City:
         geoDF = geoDF[necessary_cols]
     
         # read this for Polygon to MultiPolygon: https://gis.stackexchange.com/questions/311320/casting-geometry-to-multi-using-geopandas
+        # allow polygon as boundary
         geoDF["geometry"] = [MultiPolygon([feature]) if isinstance(feature, Polygon) else feature for feature in geoDF["geometry"]]
 
         geoDF['wardBounds'] = geoDF.apply( (lambda row:  MultiPolygon(row['geometry']).bounds), axis=1)
@@ -288,7 +289,7 @@ class City:
             axis=1
             )
         geoDF['wardNo'] = geoDF['wardNo'].astype(int)
-        geoDF['wardName'] = geoDF['wardName'].astype(str)
+        geoDF['wardName'] = geoDF['wardName'].astype(str) # make sure it's string... not translated zipcode to number
 
         self.wardData = self.wardData.merge(
             geoDF, 
