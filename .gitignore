@@ -1,7 +1,6 @@
 staticInst/data/synthpops/*
-cpp-simulator/outputs/
-cpp-simulator/outputs/**
-cpp-simulator/outputs/test_output_timing/**
+**/cpp-simulator/outputs/
+cpp-simulator/outputs/test_output_timing/*
 
 # Created by https://www.gitignore.io/api/vim,linux,macos,latex,python,windows,sublimetext,jupyternotebooks,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=vim,linux,macos,latex,python,windows,sublimetext,jupyternotebooks,visualstudiocode
